@@ -1,10 +1,10 @@
 import React from "react";
 import Film from "./Film";
 
-const FilmList = ({films}) => {
+const FilmList = ({films, onFilmClick}) => {
 
     const filmProfiles = films.map((film, index) => {
-        return <Film film = {film} key = {index} />
+        return <Film film = {film} key = {index} onFilmClick = {onFilmClick}/>
     })
 
     return (
@@ -13,7 +13,7 @@ const FilmList = ({films}) => {
             Studio Ghibli Films
             </header>
             <ol>
-                    {filmProfiles}
+                {filmProfiles}
             </ol>
         </>
     )

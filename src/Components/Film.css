@@ -4,6 +4,12 @@ ol {
     flex-wrap: wrap;
     list-style-type: none;
     margin-top: 110px;
+    margin-bottom: 220px;
+
+}
+
+ol > li > div p {
+    margin: 0;
 }
 
 ol > li > div {
@@ -15,6 +21,7 @@ ol > li > div {
     border: 1px solid white;
     border-radius: 6px;
     filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.344));
+    line-height: 20px;
 }
 
 .film-details {
@@ -23,5 +30,6 @@ ol > li > div {
 
 ol > li > div > img {
     width: 250px;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
