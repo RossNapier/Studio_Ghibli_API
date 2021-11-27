@@ -1,0 +1,27 @@
+ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-top: 110px;
+}
+
+ol > li > div {
+    background-color: rgb(46, 46, 46);
+    color: white;
+    padding: 0px;
+    width: 250px;
+    margin: 20px;
+    border: 1px solid white;
+    border-radius: 6px;
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.344));
+}
+
+.film-details {
+    padding: 20px;
+}
+
+ol > li > div > img {
+    width: 250px;
+    border-radius: 5px;
+}
