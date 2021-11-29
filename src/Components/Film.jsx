@@ -9,15 +9,14 @@ const Film = ({film, onFilmClick}) => {
 
     return (
         <>
-            <li class = "film-item">
+            <li>
                 <div>
                     <img src = {film.image} alt = {film.title} onClick = {handleClick}></img>
                     <div class = "film-details" onClick = {handleClick}>
-                        <h2>{film.title}</h2>
-                        <h3>{film.release_date}</h3>
-                        <p>Rotten Tomatoes score: {film.rt_score}</p>
-                        <p>Running time: {film.running_time} mins</p>
+                        <p class = "film-tile-title">{film.title}</p>
+                        <p>{film.release_date}</p>
                     </div>
+                    <p class = "rt-num">{film.rt_score}%</p>
                 </div>
             </li>
         </>

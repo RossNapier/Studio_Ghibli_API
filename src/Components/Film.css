@@ -4,16 +4,10 @@ ol {
     flex-wrap: wrap;
     list-style-type: none;
     margin-top: 110px;
-    margin-bottom: 220px;
-
-}
-
-ol > li > div p {
-    margin: 0;
 }
 
 ol > li > div {
-    background-color: rgb(46, 46, 46);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.842) 0%, rgba(102,102,102,1) 50%);
     color: white;
     padding: 0px;
     width: 250px;
@@ -21,15 +15,34 @@ ol > li > div {
     border: 1px solid white;
     border-radius: 6px;
     filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.344));
-    line-height: 20px;
 }
 
 .film-details {
-    padding: 20px;
+    padding: 10px;
+}
+
+.film-details > p {
+    margin: 5px;
+    font-size: 5mm;
 }
 
 ol > li > div > img {
     width: 250px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.rt-num {
+    position: absolute;
+    top: 320px;
+    left: 8px;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.379);
+    border: solid white 1px;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.film-tile-title {
+    font-weight: bolder;
 }
