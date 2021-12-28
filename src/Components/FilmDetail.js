@@ -7,7 +7,8 @@ const FilmDetail = ({film, onBannerClick}) => {
     }
 
     return(
-        <div id="film-detail" onClick = {handleClick}>
+        <div id="film-detail">
+            <button id="close" onClick = {handleClick}>x</button>
             <section id = "film-desc">
                 <p id="film-detail-title">{film.title} • {film.original_title} • {film.release_date}</p>
                 <p>{film.description}</p>

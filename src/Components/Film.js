@@ -10,9 +10,9 @@ const Film = ({film, onFilmClick}) => {
     return (
         <>
             <li>
-                <div>
-                    <img src = {film.image} alt = {film.title} onClick = {handleClick}></img>
-                    <div class = "film-details" onClick = {handleClick}>
+                <div onClick = {handleClick}>
+                    <img src = {film.image} alt = {film.title}></img>
+                    <div class = "film-details">
                         <p class = "film-tile-title">{film.title}</p>
                         <p>{film.release_date}</p>
                     </div>
