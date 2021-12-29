@@ -48,7 +48,7 @@ const FilmList = ({films, onFilmClick, onSortClick, getFilms}) => {
         <>
             <header>
             <b>Studio Ghibli Films</b>
-                <div>Sort by:
+                <div id = "navbar">Sort by:
                     <button onClick = {sortChron}>Release</button>
                     <button onClick = {sortTitle}>Title</button>
                     <button onClick = {sortRunTime}>Run Time</button>

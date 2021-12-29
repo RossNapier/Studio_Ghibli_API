@@ -4,8 +4,6 @@ body {
     background-attachment: fixed;
 }
 
-
-
 header {
     background-color: rgba(52, 52, 52, 0.899);
     padding: 20px;
@@ -22,18 +20,24 @@ header b {
     font-size: xx-large;
 }
 
-header div {
-    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.571));
-    background-color: rgba(52, 52, 52);
-    border: solid 1px white;
+#navbar {
+    background: linear-gradient(90deg, rgba(52,52,52,0) 0%, rgba(52,52,52,1) 10%);
     width: 500px;
     padding: 10px;
     position: absolute;
-    left: 50%;
-    margin-left: -250px;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 20px;
+    right: 60px;
+    top: 10px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+#navbar button {
+    background-color: rgba(52, 52, 52);
+    border: solid 1px white;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-left: 10px;
 }
 
 #film-detail {
