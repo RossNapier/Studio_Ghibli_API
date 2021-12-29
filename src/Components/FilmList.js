@@ -14,21 +14,35 @@ const FilmList = ({films, onFilmClick, onSortClick, getFilms}) => {
     return x < y ? -1 : x > y ? 1 : 0;
     });
 
-    const sortTitle = function() {
-        onSortClick(filmByTitle);
-    }
+    const filmByRunTime = films.slice(0);
+    filmByRunTime.sort(function(a,b) {
+        let x = parseInt(a.running_time);
+        let y = parseInt(b.running_time);
+    return x < y ? -1 : x > y ? 1 : 0;
+    });
+
+    const filmByRTScore = films.slice(0);
+    filmByRTScore.sort(function(a,b) {
+        let x = parseInt(a.rt_score);
+        let y = parseInt(b.rt_score);
+    return x < y ? -1 : x > y ? 1 : 0;
+    });
 
     const sortChron = function() {
         getFilms();
     }
 
-    // const filmProfilesAZ = filmByTitle.map((film, index) => {
-    //     return <Film film = {film} key = {index} onFilmClick = {onFilmClick}/>
-    // })
+    const sortTitle = function() {
+        onSortClick(filmByTitle);
+    }
 
-    // const sortAZ = function() {
-    //     onSortAZ(filmSortAZ);
-    // }
+    const sortRunTime = function() {
+        onSortClick(filmByRunTime);
+    }
+
+    const sortRTScore = function() {
+        onSortClick(filmByRTScore.reverse());
+    }
 
     return (
         <>
@@ -37,11 +51,12 @@ const FilmList = ({films, onFilmClick, onSortClick, getFilms}) => {
                 <div>Sort by:
                     <button onClick = {sortChron}>Release</button>
                     <button onClick = {sortTitle}>Title</button>
+                    <button onClick = {sortRunTime}>Run Time</button>
+                    <button onClick = {sortRTScore}>Rotten Tomatoes Score</button>
                 </div>
             </header>
             <ol>
                 {filmProfiles}
-                {/* {sortedFilms ? {sortedFilms} : {filmProfiles}}; */}
             </ol>
         </>
     )
