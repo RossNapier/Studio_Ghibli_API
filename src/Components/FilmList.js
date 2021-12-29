@@ -1,7 +1,7 @@
 import React from "react";
 import Film from "./Film";
 
-const FilmList = ({films, onFilmClick, onSortAZ}) => {
+const FilmList = ({films, onFilmClick, onSortClick}) => {
 
     const filmProfiles = films.map((film, index) => {
         return <Film film = {film} key = {index} onFilmClick = {onFilmClick}/>
@@ -14,9 +14,13 @@ const FilmList = ({films, onFilmClick, onSortAZ}) => {
     return x < y ? -1 : x > y ? 1 : 0;
     });
 
-    const filmSortAZ = filmByTitle.map((film, index) => {
-        return <Film film = {film} key = {index} onFilmClick = {onFilmClick}/>
-    })
+    const sortAZ = function() {
+        onSortClick(filmByTitle);
+    }
+
+    // const filmProfilesAZ = filmByTitle.map((film, index) => {
+    //     return <Film film = {film} key = {index} onFilmClick = {onFilmClick}/>
+    // })
 
     // const sortAZ = function() {
     //     onSortAZ(filmSortAZ);
@@ -26,11 +30,11 @@ const FilmList = ({films, onFilmClick, onSortAZ}) => {
         <>
             <header>
             Studio Ghibli Films
-            <button>Sort</button>
+            <button onClick = {sortAZ}>Sort</button>
             </header>
             <ol>
                 {filmProfiles}
-                {filmSortAZ}
+                {/* {sortedFilms ? {sortedFilms} : {filmProfiles}}; */}
             </ol>
         </>
     )

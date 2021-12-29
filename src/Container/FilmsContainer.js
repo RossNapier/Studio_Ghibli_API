@@ -6,7 +6,7 @@ import "./Container.css";
 const FilmsContainer = () => {
     const [films, setFilms] = React.useState([]);
     const [selectedFilm, setSelectedFilm] = React.useState(null);
-    const [sortedFilms, setSortedFilms] = React.useState(null);
+    // const [sortedFilms, setSortedFilms] = React.useState(null);
 
     React.useEffect(() => {
         getFilms();
@@ -16,13 +16,13 @@ const FilmsContainer = () => {
         setSelectedFilm(film);
     }
 
+    const onSortClick = function(films) {
+        setFilms(films);
+    }
+
     const onBannerClick = function() {
         setSelectedFilm(null);
     }
-
-    // const onSortAZ = function(AZ) {
-    //     setSortedFilms(AZ);
-    // }
 
     const getFilms = function(){
         fetch("https://ghibliapi.herokuapp.com/films")
@@ -33,7 +33,7 @@ const FilmsContainer = () => {
     return (
         <>
         {selectedFilm ? <FilmDetail film = {selectedFilm} onBannerClick = {onBannerClick}/> : null};
-        <FilmList films = {films} onFilmClick = {onFilmClick}/>
+        <FilmList films = {films} onFilmClick = {onFilmClick} onSortClick = {onSortClick}/>
         </>
     )
 };
