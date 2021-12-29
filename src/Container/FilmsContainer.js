@@ -33,7 +33,7 @@ const FilmsContainer = () => {
     return (
         <>
         {selectedFilm ? <FilmDetail film = {selectedFilm} onBannerClick = {onBannerClick}/> : null};
-        <FilmList films = {films} onFilmClick = {onFilmClick} onSortClick = {onSortClick}/>
+        <FilmList films = {films} onFilmClick = {onFilmClick} onSortClick = {onSortClick} getFilms = {getFilms}/>
         </>
     )
 };
